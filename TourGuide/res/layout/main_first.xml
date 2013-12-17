@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="180dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/main_into_btn"
+            android:layout_width="130dip"
+            android:layout_height="30dip"
+            android:background="@drawable/main_into"
+            android:gravity="center"
+            android:text="@string/main_choose_into"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/main_login_btn"
+            android:layout_width="130dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/main_choose_login"
+            android:gravity="center"
+            android:text="@string/main_choose_login_msg"
+            android:textColor="#283C57"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:text="@string/main_choose_login"
+            android:textColor="#2D77A6"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</RelativeLayout>

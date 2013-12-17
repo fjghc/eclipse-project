@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="msa">
+     <item>五里关</item>
+     <item>石门</item>
+     <item>毛女洞 </item>
+     <item>回心石</item>
+     <item>千尺幢</item>
+     <item>北峰（云台峰）</item>
+     <item>苍龙岭</item>
+     <item>五云峰 </item>
+     <item>金锁关</item>
+     <item>中锋（玉女峰）</item>
+     <item>鹞子翻身</item>
+     <item>东峰（朝阳峰）</item>
+     <item>长空栈道</item>
+     <item>南峰（落雁峰）</item>
+     <item>西峰顶（莲花峰）</item>
+     <item>舍身崖</item>
+  </string-array>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#C6E2FF"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:gravity="center"
+        android:background="@drawable/spot_titlebg"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#C9C9C9"
+        android:text="@string/themelist_title"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        />
+    <ListView
+        android:id="@+id/ListView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#B5B5B5"
+        android:dividerHeight="1dp"
+        android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+	    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+	    android:scrollbarSize="12dip"
+        android:choiceMode="singleChoice" />
+</LinearLayout>

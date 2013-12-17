@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server hostname="localhost" id="JBoss v4.2 2 at localhost" name="JBoss v4.2 2 at localhost" runtime-id="JBoss v4.2 2" server-type="org.eclipse.jst.server.generic.jboss42" server-type-id="org.eclipse.jst.server.generic.jboss42" start-timeout="50" stop-timeout="15" timestamp="8">
+    <map jndiPort="1099" key="generic_server_instance_properties" port="8080" serverAddress="127.0.0.1" serverConfig="default"/>
+    <list key="modules" value0="exp3::org.eclipse.jst.jee.server:exp3::jst.web::2.5" value1="ex4::org.eclipse.jst.jee.server:ex4::jst.ejb::3.0"/>
+    <list key="Generic_Server_Modules_List" value0="org.eclipse.jst.jee.server:exp3" value1="org.eclipse.jst.jee.server:ex4"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="exp3::org.eclipse.jst.jee.server:exp3::jst.web::2.5"/>
+  </server>
+</servers>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:orientation="vertical" android:id="@+id/dContentLayout">
+	<AbsoluteLayout android:layout_height="wrap_content"
+		android:id="@+id/imagesLayout" android:layout_width="fill_parent"
+		android:minHeight="200dip">
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:id="@+id/dForecastImage"
+			android:adjustViewBounds="true" 
+			android:maxHeight="131dip"
+			android:maxWidth="131dip" 
+			android:minHeight="131dip"
+			android:minWidth="131dip" 
+			android:layout_x="98dip" 
+			android:layout_y="0dip" />
+
+		<ImageView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:id="@+id/dMoveLeftImage"
+			android:maxHeight="131dip" 
+			android:maxWidth="131dip"
+			android:minHeight="131dip" 
+			android:minWidth="131dip"
+			android:layout_x="10dip"
+			android:adjustViewBounds="true" 
+			android:visibility="invisible"
+			android:layout_y="70dip" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:id="@+id/dMoveRightImage"
+			android:adjustViewBounds="true" 
+			android:maxHeight="131dip"
+			android:maxWidth="131dip" 
+			android:minHeight="131dip"
+			android:minWidth="131dip" 
+			android:layout_x="150dip" 
+			android:visibility="invisible"
+			android:layout_y="70dip" />
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_x="20dip"
+			android:gravity="center" 
+			android:id="@+id/dCityText"
+			android:textSize="20sp" 
+			android:width="280dip" 
+			android:textColor="#FFFFFF"
+			android:layout_y="110dip" />
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:id="@+id/dConditionText"
+			android:layout_x="20dip" 
+			android:textColor="#FFFFFF"
+			android:textSize="14sp" 
+			android:width="120dip" 
+			android:layout_y="140dip" />
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_x="20dip"
+			android:id="@+id/dHumidityText" 
+			android:textColor="#FFFFFF" 
+			android:textSize="12sp"
+			android:layout_y="160dip" 
+			android:width="160dip" />
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_x="20dip"
+			android:id="@+id/dWindText" 
+			android:textColor="#FFFFFF" 
+			android:textSize="12sp"
+			android:layout_y="180dip" 
+			android:width="160dip" />
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_x="200dip"
+			android:id="@+id/dTempCText" 
+			android:textColor="#FFFFFF"
+			android:gravity="center" 
+			android:textSize="50sp" 
+			android:width="100dip"
+			android:layout_y="140dip"></TextView>
+	</AbsoluteLayout>
+	<ListView 
+	    android:layout_height="wrap_content"
+		android:layout_width="fill_parent" 
+		android:id="@android:id/list"/>
+</LinearLayout>

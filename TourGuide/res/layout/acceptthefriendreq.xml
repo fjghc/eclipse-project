@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6E2FF"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/spot_titlebg"
+        android:gravity="center"
+        android:text="请求信息"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#C9C9C9"
+        android:textSize="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="100dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/phoneNum"
+                android:layout_width="90dip"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="手机号"
+                android:textColor="#1874CD"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/phoneNumShow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="传入的，动态显示的"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/cerMsg"
+                android:layout_width="90dip"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="认证消息"
+                android:textColor="#1874CD"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/phoneNumShow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="我是XXX"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/OKBtn"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/login_button_bg"
+                android:text="接受" />
+
+            <Button
+                android:id="@+id/DenyBtn"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:background="@drawable/login_button_bg"
+                android:text="拒绝" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

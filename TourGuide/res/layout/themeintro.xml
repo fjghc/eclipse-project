@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0F0F5"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:gravity="center"
+        android:background="@drawable/spot_titlebg"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#C9C9C9"
+        android:text="@string/martial_arts"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+	    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+	    android:scrollbarSize="12dip">
+	    
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+   	    android:layout_height="50dip"
+   	    android:layout_marginTop="20dip"
+        android:orientation="horizontal" >
+    
+	    <ImageView
+	        android:layout_width="100dip"
+	        android:layout_height="50dip"
+	      
+	        android:id="@+id/theme_infi_iv"
+	        android:layout_weight="2"
+			/>
+	    
+	    <TextView
+	        android:layout_width="180dip"
+	        android:layout_height="50dip"
+	        android:layout_weight="3"
+	        android:layout_marginLeft="10dip"
+	        android:textColor="#000000"
+	        android:id="@+id/theme_info"
+	        android:text="飞雪连天射白鹿，笑书神侠倚碧鸳" 
+	        android:lines="2"/>
+	    
+	</LinearLayout>
+	
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#607B8B"
+		android:layout_marginTop="10dip"
+		android:background="@drawable/listbg"
+	    android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:text="主题概要介绍" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="140dip"
+        android:id="@+id/theme_description"
+        android:textColor="#4A4A4A"
+        android:gravity="left"
+		android:layout_marginTop="10dip"
+	    android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#607B8B"
+        android:gravity="center"
+        android:background="@drawable/listbg"
+        android:layout_marginTop="20dip"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:text="景点列表" />
+    
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="110dip"
+        android:choiceMode="singleChoice"
+        android:divider="#B5B5B5"
+        android:textColor="#D75B11"     
+	    android:dividerHeight="1dp"
+        android:id="@+id/spotslistviewbytheme" />
+    <Button
+        android:id="@+id/viewThemeOnMap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/theme_goto_map"
+        android:drawableRight="@drawable/ic_gotomap"
+        android:drawableLeft="@drawable/show_inmap"
+        android:text="@string/themebutton_text" />
+    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

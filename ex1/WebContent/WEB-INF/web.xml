@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>ex1</display-name>
+
+
+	<context-param>
+	<param-name>name</param-name>
+	<param-value>Zehui Song</param-value>
+	</context-param>
+	<context-param>
+	<param-name>id</param-name>
+	<param-value>2013262617</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>First Servlet</servlet-name>
+		<servlet-class>lesson.j2ee.ex1.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>First Servlet</servlet-name>
+		<url-pattern>/Serv1</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CodeReturn Servlet</servlet-name>
+		<servlet-class>lesson.j2ee.ex1.CodeReturn</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CodeReturn Servlet</servlet-name>
+		<url-pattern>/CodeReturn</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SelectBeer Servlet</servlet-name>
+		<servlet-class>lesson.j2ee.ex1.SelectBeerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SelectBeer Servlet</servlet-name>
+		<url-pattern>/SelectBeer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Brown Servlet</servlet-name>
+		<servlet-class>lesson.j2ee.ex1.ShowBrownBeer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Brown Servlet</servlet-name>
+		<url-pattern>/Brown</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Dark Servlet</servlet-name>
+		<servlet-class>lesson.j2ee.ex1.ShowDarkBeer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dark Servlet</servlet-name>
+		<url-pattern>/Dark</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestInitParams</servlet-name>
+		<servlet-class>lesson.j2ee.ex1.TestInitParams</servlet-class>
+		<init-param>
+		<param-name>myEmail</param-name>
+		<param-value>songzh215@163.com</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestInitParams</servlet-name>
+		<url-pattern>/TestInit</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

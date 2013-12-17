@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="moodarray">
+     <item>已走路线</item>
+     <item>景点</item>
+     <item>卫生间</item>
+     <item>休息点 </item>
+     <item>餐饮</item>
+     <item>住宿</item>
+  </string-array>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#C6E2FF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/spot_titlebg"
+        android:gravity="center"
+        android:text="@string/myFriend_title"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#C9C9C9"
+        android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/friendLocationListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="#B5B5B5"
+        android:dividerHeight="1dp"
+        android:textColor="#D75B11" />
+
+    <Button
+        android:id="@+id/addFriendBtn"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:drawableLeft="@drawable/add_friend"
+        android:text="@string/addFriend" />
+
+</LinearLayout>

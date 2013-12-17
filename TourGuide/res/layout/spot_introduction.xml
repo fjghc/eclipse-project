@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Demonstrates scrolling with a ScrollView. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F5"
+    android:orientation="vertical" >
+
+    <!-- 景点标题，是哪个景点 -->
+
+    <TextView
+        android:id="@+id/spot_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/spot_titlebg"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textColor="#FFFFFF" >
+    </TextView>
+    <!-- android:background="@drawable/spot_titlebg" -->
+
+
+    <!-- 滚动条 -->
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="12dip"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 景点介绍文字标题 -->
+            <!--
+            <TextView
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+				android:textColor="#607B8B"
+				android:layout_marginTop="10dip"
+	            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+	            android:text="@string/spot_description_title">
+	        </TextView>
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip" >
+
+                <!-- 整体评分文字 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spot_grade_level"
+                    android:textColor="#4A4A4A" />
+
+                <!-- 整体评分星级 -->
+
+                <RatingBar
+                    android:id="@+id/small_ratingbar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip" />
+
+                <!-- 导游音频视频 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/video_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/small_ratingbar"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/video_introduction_bg" />
+
+                    <Button
+                        android:id="@+id/voice_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/video_button"
+                        android:background="@drawable/voice_introduction_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 景点介绍具体文字 -->
+
+            <TextView
+                android:id="@+id/spot_description"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:textColor="#4A4A4A" />
+
+            <!-- 景点照片标题 -->
+
+            <TextView
+                android:id="@+id/picOfSpot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/listbg"
+                android:gravity="center"
+                android:text="@string/spot_photo_title"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                android:textColor="#607B8B" />
+
+            <!-- 景点照片Gallery方式浏览？？？高度设成个啥？？？ -->
+
+            <Gallery
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="200px" />
+            
+             <!-- 餐饮和娱乐场所的价格信息，当显示信息为景点信息时 不显示 -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    			android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:background="#F0F0F5"
+    			android:orientation="vertical"
+    			android:visibility="gone" 
+    			android:id="@+id/price_layout">
+                
+                 <TextView
+                    android:id="@+id/service_price_title"
+                	android:layout_width="match_parent"
+                	android:layout_height="match_parent"
+                	android:background="@drawable/listbg"
+                	android:gravity="center"
+                	android:text="价格介绍"
+               	 	android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                	android:textColor="#607B8B" />
+                <ListView
+                	android:id="@+id/service_price_view"
+                	android:layout_width="fill_parent"
+                	android:layout_height="400px"
+                	android:layout_marginTop="10dip"
+                	android:divider="#B5B5B5"
+                	android:dividerHeight="1dp"
+                	android:textColor="#4A4A4A" >
+            	</ListView>        
+            </LinearLayout>
+
+            <!-- 游客评论标题？？？高度不知道怎么设置？？？ -->
+
+            <TextView
+                android:id="@+id/touristComment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/listbg"
+                android:gravity="center"
+                android:text="@string/spot_tourists_comment"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                android:textColor="#607B8B" />
+
+            <!-- 游客评论内容 listView形式 -->
+
+            <ListView
+                android:id="@+id/spot_comment_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="400px"
+                android:layout_marginTop="10dip"
+                android:divider="#B5B5B5"
+                android:dividerHeight="1dp"
+                android:textColor="#4A4A4A" >
+            </ListView>
+
+            <!-- 游客评论之我要评论 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:text="@string/spot_me_comment" />
+
+            <!-- 显示昵称 并输入评论内容 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+"
+                <!-- 显示昵称 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dip"
+                    android:text="@string/spot_me_comment_nickname"
+                    android:textColor="#1874CD"
+                    android:textSize="20dip"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/spot_me_comment_nickname"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:background="@android:drawable/editbox_background"
+                    android:gravity="left"
+                    android:inputType="text"
+                    android:paddingLeft="5dip"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true" >
+                </EditText>
+            </LinearLayout>
+
+            <!-- 显示输入评论内容字样 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:paddingLeft="5dip"
+                android:text="@string/spot_comment_content"
+                android:textColor="#1874CD"
+                android:textSize="12dip" />
+
+            <EditText
+                android:id="@+id/spot_me_comment_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:gravity="top"
+                android:minLines="3"
+                android:paddingLeft="5dip"
+                android:singleLine="false"
+                android:textStyle="bold" />
+
+            <!-- 评论发表按钮 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/submit_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/spot_me_comment_content"
+                    android:layout_marginRight="20dip"
+                    android:text="@string/spot_comment_submit" />
+            </RelativeLayout>
+
+            <!-- 显示我要打分 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spot_tourist_grade_title" />
+
+            <RatingBar
+                android:id="@+id/ratingbar1"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="2.5" />
+            <!-- 评分提交按钮 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/readlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ratingbar1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dip"
+                    android:text="@string/spot_tourist_grade_submit" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
